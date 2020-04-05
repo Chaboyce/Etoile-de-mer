@@ -1,0 +1,11 @@
+<div> <h1>Actualise le produit</h1></div>
+<div>
+  <%= simple_form_for(@article) do |f| %>
+  <%= f.input :name, label: false, placeholder: "Nom" %>
+  <%= f.input :categorie, label: false, placeholder: "Catégorie" %>
+  <%= f.input :price, label: false, placeholder: "Prix" %>
+  <%= f.input :photo, as: :file, label: false, placeholder: "Photo" %>
+  <%= f.button :submit, class: "btn btn-danger text-center"%>
+  <%end %>
+
+</div>

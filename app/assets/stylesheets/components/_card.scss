@@ -1,6 +1,6 @@
 .card-category {
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
   height: 180px;
   display: flex;
   justify-content: center;
@@ -13,3 +13,13 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 5px;
 }
+
+.carousel-item {
+  height: 400px;
+}
+
+.carousel {
+background-size: cover;
+background-repeat: no-repeat;
+}
+

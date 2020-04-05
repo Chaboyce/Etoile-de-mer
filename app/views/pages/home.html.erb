@@ -8,13 +8,13 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <%= image_tag "robe1.png", class:'d-block w-100'%>
+          <%= image_tag "kimonos.png", class:'carousel d-block w-100'%>
         </div>
         <div class="carousel-item">
-          <%= image_tag "robe2.png", class:'d-block w-100'%>
+          <%= image_tag "robe2.png", class:'carousel d-block w-100'%>
         </div>
         <div class="carousel-item">
-          <%= image_tag "robe1.png", class:'d-block w-100'%>
+          <%= image_tag "robe1.png", class:'carousel d-block w-100'%>
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -32,16 +32,15 @@
 <div class="row mt-3">
   <div class="col">
     <div class="d-flex justify-content-between">
-      <div class="col-3 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-        Breakfast
+      <div class="col-3 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path 'kimono-zoom.png' %>')">
+        Kimonos
       </div>
 
-      <div class="col-3 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/lunch.jpg)">
-        Lunch
+      <div class="col-3 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path 'haut-croise.png' %>')">
+        Hauts
       </div>
-
-      <div class="col-3 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-        Dinner
+      <div class="col-3 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path 'robe1.png' %>')">
+        Robes
       </div>
     </div>
   </div>

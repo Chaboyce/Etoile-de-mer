@@ -32,32 +32,14 @@
 <div class="row mt-3">
   <div class="col">
     <div class="d-flex justify-content-between">
-      <div class="col-3 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path 'sac-presentation.jpeg' %>')">
-          Sacs
-      </div>
+      <% @categories.each do |categorie|%>
+        <div class="col-3 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path categorie.photo.key, crop: :fill if categorie.photo.attached? %>)">
+          <%= categorie.name %>
+        <%#= link_to categorie.name , categorie_path(cocktail) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
 
-      <div class="col-3 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path 'haut-croise.jpeg' %>')">
-        Hauts
-      </div>
-      <div class="col-3 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path 'robe1.jpeg' %>')">
-        Robes
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row mt-3">
-  <div class="col">
-    <div class="d-flex justify-content-between">
-      <div class="col-3 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path 'kimono-zoom.jpeg' %>')">
-        Kimonos
-      </div>
-      <div class="col-3 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path 'haut-croise.jpeg' %>')">
-        Hauts
-      </div>
-      <div class="col-3 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path 'robe1.jpeg' %>')">
-        Robes
-      </div>
-    </div>
-  </div>
-</div>
 

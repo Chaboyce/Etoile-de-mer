@@ -11,12 +11,14 @@ class ArticlesController < ApplicationController
   end
 
   def new
+    @categorie = Categorie.find(params[:categorie_id])
     @article=Article.new
     authorize @article
   end
 
   def create
     @article=Article.new(article_params)
+    @categorie = Categorie.find(params[:categorie_id])
     authorize @article
       if @article.save!
         redirect_to root_path

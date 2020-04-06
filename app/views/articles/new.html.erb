@@ -4,7 +4,7 @@
   <%= f.input :name, label: false, placeholder: "Nom" %>
   <%= f.input :categorie, label: false, placeholder: "Catégorie" %>
   <%= f.input :price, label: false, placeholder: "Prix" %>
-  <%= f.input :photo, as: :file, label: false, placeholder: "Photo" %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true }, label: false, placeholder: "Photo" %>
   <%= f.button :submit, class: "btn btn-danger text-center"%>
   <%end %>
 

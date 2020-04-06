@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Drop database..."
+Article.destroy_all
+puts "databases dropped!"
+
+puts "Creating articles..."
+navalo = Article.new(name:"Port Navalo Marine", categorie: "Sacs", price: 55)

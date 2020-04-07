@@ -2,10 +2,13 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Categorie.all
+    authorize @categories
   end
 
   def show
-    @cocktail = Cocktail.find(params[:id])
+    @categorie = Categorie.find(params[:id])
+    authorize @categorie
+    @articles = @categorie.articles
   end
 
 end

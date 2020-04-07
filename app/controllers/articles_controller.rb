@@ -6,8 +6,8 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @article = Article.find(params[:id])
     authorize @article
-    @articles = Article.find(params[:id])
   end
 
   def new
@@ -50,7 +50,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:name, :categorie, :price, photos: [], description:, color:)
+    params.require(:article).permit(:name, :categorie, :price, :avatar, :description, :color, :dimensions, :matiere, :conseil, photos: [])
   end
 
 end

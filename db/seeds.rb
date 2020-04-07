@@ -31,7 +31,7 @@ puts 'Done attaching categories'
 
 puts "Creating articles..."
 
-navalo = Article.create!(name:"Port Navalo", categorie: sacs, price: 55, color: "Marine", description: "C'est la pièce phare de la collection Eté 2020 ! Porté épaule, ce sac assez grand et organisé pour y ranger nos essentiels facilement est imaginé, conçu et entièrement cousu en Bretagne. Ses petits boutons dorés et sa bandoulière unique et inédite complètent son look rétro et chic.")
+navalo = Article.create!(name:"Port Navalo", categorie: sacs, price: 55, color: "Marine", description: "C'est la pièce phare de la collection Eté 2020 ! Porté épaule, ce sac assez grand et organisé pour y ranger nos essentiels facilement est imaginé, conçu et entièrement cousu en Bretagne. Ses petits boutons dorés et sa bandoulière unique et inédite complètent son look rétro et chic.", dimensions: "Hauteur :14 cm, Longueur :24 cm, Profondeur : 3,5cm, Bandoulière :120 cm ", matiere: "simili cuir (extérieur), cuir (passepoil) et soie (intérieure)", conseil: "de l'eau clair et du savon doux pour les petites tâches.")
 
 puts 'Done creating articles'
 
@@ -39,6 +39,14 @@ puts 'Done creating articles'
 puts 'Attaching photos to articles'
 
 file_navalo=URI.open("https://res.cloudinary.com/djuy4uxrd/image/upload/v1586167155/sac-entier_se2wk4.jpg")
-navalo.photo.attach(io: file_navalo, filename: 'navalo.jpg')
+navalo.avatar.attach(io: file_navalo, filename: 'navalo.jpg')
+file_navalo=URI.open("https://res.cloudinary.com/djuy4uxrd/image/upload/v1586167156/sac-presentation_zjfrql.jpg")
+navalo.photos.attach(io: file_navalo, filename: 'navalo-pres.jpg')
+file_navalo=URI.open("https://res.cloudinary.com/djuy4uxrd/image/upload/v1586167156/sac-ouvert_xmbnxg.jpg")
+navalo.photos.attach(io: file_navalo, filename: 'navalo-ouvert.jpg')
+file_navalo=URI.open("https://res.cloudinary.com/djuy4uxrd/image/upload/v1586167155/sacfinition_ryxvgb.jpg")
+navalo.photos.attach(io: file_navalo, filename: 'navalo-finition.jpg')
+file_navalo=URI.open("https://res.cloudinary.com/djuy4uxrd/image/upload/v1586167155/sac-interieur_oc8t3l.jpg")
+navalo.photos.attach(io: file_navalo, filename: 'navalo-interieur.jpg')
 
 puts 'Done attaching photos'

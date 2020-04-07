@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_06_150522) do
+ActiveRecord::Schema.define(version: 2020_04_07_132330) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,9 @@ ActiveRecord::Schema.define(version: 2020_04_06_150522) do
     t.text "description"
     t.string "color"
     t.bigint "categorie_id"
+    t.text "dimensions"
+    t.text "matiere"
+    t.text "conseil"
     t.index ["categorie_id"], name: "index_articles_on_categorie_id"
   end
 

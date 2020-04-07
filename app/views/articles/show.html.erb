@@ -1,1 +1,26 @@
-<h1><%=@articles.name%> </h1>
+
+<div class="row align-items-center card-article">
+  <div class="col-6 h-50" style="background-image:url('<%= cl_image_path @article.photos.first.key if @article.photos.attached? %>'); background-size:contain; background-repeat:no-repeat; background-position: center">
+  </div>
+  <div class="col-4 h-100 d-flex flex-column align-items-left card-article-infos">
+    <div>
+      <h2><%=@article.name%></h2>
+    </div>
+    <div>
+      <h3>Desription</h3>
+      <p> <%=@article.description%></p>
+    </div>
+    <div>
+      <h3>Dimensions</h3>
+      <p> <%=@article.dimensions%></p>
+    </div>
+    <div>
+      <h3>Matière</h3>
+      <p> <%=@article.matiere%></p>
+    </div>
+    <div>
+      <h3>Conseils d'entretien</h3>
+      <p> <%=@article.conseil%></p>
+    </div>
+  </div>
+</div>

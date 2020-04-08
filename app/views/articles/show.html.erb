@@ -1,26 +1,61 @@
-
-<div class="row align-items-center card-article">
-  <div class="col-6 h-50" style="background-image:url('<%= cl_image_path @article.photos.first.key if @article.photos.attached? %>'); background-size:contain; background-repeat:no-repeat; background-position: center">
+<div class="row card-article">
+  <div class="col-6 h-100 mt-5">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <%= cl_image_tag @article.avatar.key, alt: "Ômanette",class:'carousel d-block w-100 h-100'%>
+        </div>
+        <% @illustrations.photos.each do |photo| %>
+          <div class="carousel-item">
+            <%= cl_image_tag photo.key, alt: "Ômanette", class:'carousel d-block w-100 h-100'%>
+          </div>
+        <% end %>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
   </div>
-  <div class="col-4 h-100 d-flex flex-column align-items-left card-article-infos">
+
+  <div class="col-4 h-100 d-flex flex-column align-items-left">
     <div>
       <h2><%=@article.name%></h2>
     </div>
     <div>
       <h3>Desription</h3>
-      <p> <%=@article.description%></p>
+      <h4> <%=@article.description%></h4>
     </div>
     <div>
       <h3>Dimensions</h3>
-      <p> <%=@article.dimensions%></p>
+      <h4> <%=@article.dimensions%></h4>
     </div>
     <div>
       <h3>Matière</h3>
-      <p> <%=@article.matiere%></p>
+      <h4> <%=@article.matiere%></h4>
     </div>
     <div>
       <h3>Conseils d'entretien</h3>
-      <p> <%=@article.conseil%></p>
+      <h4> <%=@article.conseil%></h4>
+    </div>
+    <div class="footer-article">
+      <i class="fas fa-box-open"></i>
+      <h4>Emballage soigné et 100% recyclé</h4>
+    </div>
+    <div class="footer-article">
+      <i class="fas fa-tag"></i>
+      <h4>Conçu et cousu entièrement en Bretagne</h4>
     </div>
   </div>
 </div>

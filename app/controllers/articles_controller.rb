@@ -7,7 +7,9 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @illustrations = Article.with_attached_photos.find(params[:id])
     authorize @article
+    authorize @illustrations
   end
 
   def new

@@ -31,4 +31,5 @@ class ContactsPolicy < ApplicationPolicy
 
   def destroy?
     true
+  end
 end

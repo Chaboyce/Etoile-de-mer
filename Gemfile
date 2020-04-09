@@ -34,6 +34,11 @@ gem 'simple_form'
 gem 'devise'
 gem 'pundit'
 gem 'cloudinary', '~> 1.12.0'
+#for mailer
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'mail_form'
+gem 'jquery-rails', '~> 4.1', '>= 4.1.1'
+
 
 group :development, :test do
   gem 'pry-byebug'

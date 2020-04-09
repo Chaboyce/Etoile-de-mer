@@ -1,0 +1,5 @@
+<%= simple_form_for(@categorie) do |f| %>
+  <%= f.input :name, label: false, placeholder: "Nom" %>
+  <%= f.input :photo, as: :file, label: false, placeholder: "photo" %>
+  <%= f.submit 'Créer', class: "btn btn-primary text-center" %>
+<% end %>

@@ -1,11 +1,8 @@
-<div> <h1>Nouveau produit</h1></div>
-<div>
-  <%= simple_form_for(@article) do |f| %>
-  <%= f.input :name, label: false, placeholder: "Nom" %>
-  <%= f.input :categorie, label: false, placeholder: "Catégorie" %>
-  <%= f.input :price, label: false, placeholder: "Prix" %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true }, label: false, placeholder: "Photo" %>
-  <%= f.button :submit, class: "btn btn-danger text-center"%>
-  <%end %>
-
+<div class="row d-flex justify-content-center background-form" style= "background-image: linear-gradient(90deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url('https://res.cloudinary.com/djuy4uxrd/image/upload/v1586167133/silhouette_voeyec.jpg')">
+  <div class="col-6 p-5">
+    <div>
+      <h1 style = "color:white ">Ajouter un produit </h1>
+    </div>
+    <%= render "form_new" %>
+  </div>
 </div>

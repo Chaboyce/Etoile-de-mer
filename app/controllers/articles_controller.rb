@@ -13,32 +13,32 @@ class ArticlesController < ApplicationController
   end
 
   def new
-    @categorie = Categorie.find(params[:categorie_id])
     @article=Article.new
     authorize @article
   end
 
   def create
     @article=Article.new(article_params)
-    @categorie = Categorie.find(params[:categorie_id])
+    @categorie=Categorie.find(@article.categorie_id)
     authorize @article
       if @article.save!
-        redirect_to root_path
+        redirect_to category_path(@categorie)
       else
         render :new
       end
   end
 
   def edit
-    authorize @article
     @article = Article.find(params[:id])
+    authorize @article
   end
 
   def update
     @article.update(article_params)
     authorize @article
-    if @article.save
-      redirect_to root_path
+    @categorie=Categorie.find(@article.categorie_id)
+    if @article.save!
+      redirect_to category_path(@categorie)
     else
       render :edit
     end
@@ -52,7 +52,7 @@ class ArticlesController < ApplicationController
   private
 
   def article_params
-    params.require(:article).permit(:name, :categorie, :price, :avatar, :description, :color, :dimensions, :matiere, :conseil, photos: [])
+    params.require(:article).permit(:name, :categorie_id, :price, :avatar, :description, :color, :dimensions, :matiere, :conseil, photos: [])
   end
 
 end

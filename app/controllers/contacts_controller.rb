@@ -8,11 +8,13 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
     @contact.request = request
 
-    if @contact.save
-      render :index
+    if @contact.deliver
+      @contact = Contact.new
+      render :index, notice: "Message envoyé"
     else
-      redirect_to contacts_path
+      redirect_to contacts_path, notice: "Message non envoyé"
     end
+
   end
 
 end

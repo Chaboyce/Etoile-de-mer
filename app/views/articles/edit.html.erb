@@ -5,7 +5,7 @@
     </div>
     <%= render "form_edit" %>
     <div class ="mt-3">
-    <%= link_to "Supprimer", articles_path(@article), method: :delete, data: { confirm: "sure?" }, class: "btn btn-primary text-center" %>
+    <%= link_to "Supprimer", article_path(@article), method: :delete, data: { confirm: "sure?" }, class: "btn btn-primary text-center" %>
     </div>
   </div>
 

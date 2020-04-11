@@ -1,4 +1,5 @@
 class ArticlesController < ApplicationController
+before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @articles = Article.all
@@ -34,6 +35,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
+    @article = Article.find(params[:id])
     @article.update(article_params)
     authorize @article
     @categorie=Categorie.find(@article.categorie_id)
@@ -45,8 +47,11 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
+    @article = Article.find(params[:id])
+    @categorie=Categorie.find(@article.categorie_id)
     @article.destroy
-    redirect_to root_path
+    authorize @article
+    redirect_to category_path(@categorie)
   end
 
   private

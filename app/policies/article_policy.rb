@@ -14,7 +14,7 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def create?
-    true
+    user.admin?
   end
 
   def new?
@@ -22,7 +22,7 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def update?
-    true
+    user.admin?
   end
 
   def edit?
@@ -30,7 +30,7 @@ class ArticlePolicy < ApplicationPolicy
   end
 
   def destroy?
-    true
+    user.admin?
   end
 
 end

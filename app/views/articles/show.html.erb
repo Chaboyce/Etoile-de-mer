@@ -42,8 +42,13 @@
   </div>
 
   <div class="col-4 h-100 d-flex flex-column align-items-left">
-    <div>
+    <div class= "d-inline-flex title">
       <h2><%=@article.name%></h2>
+      <% if user_signed_in? && current_user.admin? %>
+        <%= link_to edit_article_path(@article) do %>
+          <i class="far fa-edit"></i>
+        <% end %>
+      <% end %>
     </div>
     <div>
       <h3>Description</h3>

@@ -3,7 +3,35 @@
     <a href="https://www.instagram.com/omanette_adb/?hl=fr" target="_blank"><i class="fab fa-instagram"></i></a>
     <a href="https://www.facebook.com/omanettecreation/" target="_blank"><i class="fab fa-facebook"></i></a>
   </div>
-  <div class="footer-copyright">
-    Made with <i class="fas fa-heart"></i>
+
+
+  <div>
+    Made with
+
+  <% if user_signed_in?%>
+    <% if current_user.admin? %>
+      <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-heart"></i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+      <%= link_to "log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+      <%= link_to "+ catégorie", new_category_path, class: "dropdown-item" %>
+      <%= link_to "+ produit", new_article_path, class: "dropdown-item" %>
+      </div>
+    <% else %>
+      <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-heart"></i>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+      <%= link_to "log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+      </div>
+    <% end %>
+  <% else %>
+    <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fas fa-heart"></i>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+      <%= link_to "log in", new_user_session_path, class: "dropdown-item" %>
+    </div>
+  <% end %>
   </div>
+
 </div>
+

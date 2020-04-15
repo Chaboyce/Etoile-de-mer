@@ -14,6 +14,7 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 5px;
+  position: relative;
 }
 
 .card-category a {
@@ -21,6 +22,12 @@
   text-decoration: none;
 }
 
+.card-category .far {
+  position: absolute;
+  right: 10%;
+  bottom: 5%;
+
+}
 
 //Categorie show
 .card-product {
@@ -103,4 +110,14 @@
   margin-right: 5px;
   position: relative;
   top: 8px; left: 0px;
+}
+
+
+
+.title .far {
+  margin-left: 15px;
+  position: relative;
+  top: 8px; left: 0px;
+  color: black;
+
 }

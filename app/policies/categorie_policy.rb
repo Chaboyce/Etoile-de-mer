@@ -18,7 +18,7 @@ class CategoriePolicy < ApplicationPolicy
   end
 
   def create?
-    true
+    user.admin?
   end
 
   def new?
@@ -26,7 +26,7 @@ class CategoriePolicy < ApplicationPolicy
   end
 
   def update?
-    true
+    user.admin?
   end
 
   def edit?
@@ -34,7 +34,7 @@ class CategoriePolicy < ApplicationPolicy
   end
 
   def destroy?
-    true
+    user.admin?
   end
 
 end

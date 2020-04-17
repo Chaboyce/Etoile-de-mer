@@ -1,8 +1,16 @@
 .carousel-item {
-  height: 400px;
+  height: 650px;
+  overflow: hidden;
 }
 
 .carousel {
 background-size: cover;
 background-repeat: no-repeat;
 }
+
+.carousel-indicators > li {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  }
+

@@ -32,6 +32,7 @@ class CategoriesController < ApplicationController
   end
 
   def update
+    @categorie = Categorie.find(params[:id])
     @categorie.update(categorie_params)
     authorize @categorie
     if @categorie.save

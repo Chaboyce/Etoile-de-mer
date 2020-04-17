@@ -31,7 +31,7 @@
 
 <div class="row mt-3">
   <div class="col">
-    <div class="d-flex flex-row justify-content-around">
+    <div class="card-list">
       <% @categories.each do |categorie|%>
         <div class="card-category d-flex" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path categorie.photo.key, crop: :fill if categorie.photo.attached? %>)">
           <div>

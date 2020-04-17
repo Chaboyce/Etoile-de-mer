@@ -6,9 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "Drop database..."
+User.destroy_all
 Categorie.destroy_all
 Article.destroy_all
 puts "databases dropped!"
+
+puts "Creating user..."
+
+charlotte = User.create(email: "charlotte770@hotmail.com",password: "philippine95", admin: true)
+
+puts 'Done creating user'
 
 puts "Creating categories..."
 sacs = Categorie.create!(name:"Sacs")

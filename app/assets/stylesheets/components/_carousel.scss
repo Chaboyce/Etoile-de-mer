@@ -1,5 +1,5 @@
 .carousel-item {
-  height: 650px;
+  height: 610px;
   overflow: hidden;
 }
 
@@ -14,3 +14,10 @@ background-repeat: no-repeat;
   border-radius: 100%;
   }
 
+.carousel-article {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  padding: 24px;
+
+}

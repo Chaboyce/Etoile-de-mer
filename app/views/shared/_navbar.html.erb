@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
+<div class="navbar navbar-expand-sm navbar-light sticky-top navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
     Ômanette
     <% end %>
@@ -11,9 +11,6 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
         <%= link_to "Le concept", concept_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Les pièces uniques", categories_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
         <%= link_to "Contact", contacts_path, class: "nav-link" %>

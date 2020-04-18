@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding: 60px;
-  column-gap: 0px;
+  column-gap: 40px;
   row-gap: 20px;
   justify-items: center;
 
@@ -16,7 +16,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 300px;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,11 +45,8 @@
 //Categorie show
 .card-product {
   overflow: hidden;
-  height: 120px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  align-items: center;
 }
 
 .card-product a {
@@ -58,8 +55,8 @@
 }
 
 .card-product img {
-  height: 100%;
-  width: 120px;
+  height: 200px;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -81,6 +78,9 @@
   padding: 16px;
   text-overflow: ellipsis;
   overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  position: relative
 }
 
 //Article show

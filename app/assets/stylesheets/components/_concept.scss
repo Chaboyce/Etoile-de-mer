@@ -6,7 +6,8 @@
 }
 
 .card-concept img {
-  height: 100%;
+  padding: 24px;
+  height: 100vh;
   width: 100%;
   object-fit: cover;
 }
@@ -16,7 +17,7 @@
    margin-top: 8px;
 }
 
-.card-concept h4 {
+.card-concept p {
   font-size: 12px;
   line-height: 1.4;
   opacity: .7;

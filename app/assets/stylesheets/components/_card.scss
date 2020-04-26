@@ -3,26 +3,41 @@
 .card-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 60px;
+  padding: 15px;
   column-gap: 40px;
-  row-gap: 20px;
+  row-gap: 0px;
+  column-gap: 0px;
   justify-items: center;
   flex-wrap: wrap;
+  margin: 0px 150px;
 
 }
+
+@media (max-width: 1024px) {
+  .card-list {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-list {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0px 10px;
+  }
+}
+
 
 .card-cat {
   display: flex-column;
   text-align: center;
   justify-content: center;
   position: relative;
-  width: 80%;
+  padding: 10px;
 }
 
 .title-cat{
-  position: absolute;
-  top: 276px;
-  left:40%;
+  text-align: center;
   background-color: white;
   padding: 5px;
   color: black;

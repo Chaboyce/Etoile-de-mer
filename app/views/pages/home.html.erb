@@ -31,7 +31,7 @@
     <div class="card-list">
       <% @categories.each do |categorie|%>
       <div class="card-cat">
-        <%= cl_image_tag categorie.photo.key, alt: "Ômanette",class:'card-category w-100'%>
+        <%= cl_image_tag categorie.photo.key, crop: :fit, alt: "Ômanette",class:'card-category w-100'%>
         <div class="title-cat">
           <%= link_to categorie.name , category_path(categorie) %>
         </div>

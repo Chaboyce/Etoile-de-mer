@@ -1,15 +1,21 @@
-<div class="navbar navbar-expand-sm navbar-light sticky-top navbar-lewagon">
-  <%= link_to root_path, class: "navbar-brand ml-auto mr-0" do %>
-    <h1 class="mt-2">Ômanette</h1>
+<nav class="navbar navbar-expand-md navbar-light sticky-top bg-white h-2">
+  <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"></a>
+      </li>
+    </ul>
+  </div>
+  <div class="mx-auto order-0">
+    <%= link_to root_path, class: "navbar-brand mx-auto" do %>
+      <h1 class="mt-2 mx-auto">Ômanette</h1>
     <% end %>
-
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse ml-auto " id="navbarSupportedContent">
-    <ul class="navbar-nav ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+    <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <%= link_to "Le concept", concept_path, class: "nav-link" %>
       </li>
@@ -18,4 +24,4 @@
       </li>
     </ul>
   </div>
-</div>
+</nav>

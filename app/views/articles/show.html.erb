@@ -12,7 +12,7 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <%= cl_image_tag @article.avatar.key, alt: "Ômanette",class:'carousel d-block w-100 h-100'%>
+          <%= cl_image_tag @article.avatar.key, alt: "Ômanette",class:'carousel d-block w-100 h-100' if @article.avatar.attached? %>
         </div>
         <% @illustrations.photos.each do |photo| %>
           <div class="carousel-item">

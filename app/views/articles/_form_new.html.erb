@@ -8,8 +8,8 @@
   <%= f.input :matiere, label: false, placeholder: "Matière" %>
   <%= f.input :conseil, label: false, placeholder: "Conseils" %>
   <%= f.input :price, label: false, placeholder: "Prix" %>
-   <%= f.input :avatar, as: :file, label: false, placeholder: "photo" %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true }, label: false %>
+   <%= f.input :avatar, as: :file, label: "photo principale", placeholder: "photo" %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true }, label: "photos" %>
   <%= f.submit "Créer", class: "btn btn-primary text-center"%>
   <%end %>
   </div>

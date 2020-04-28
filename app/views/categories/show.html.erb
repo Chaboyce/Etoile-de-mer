@@ -15,7 +15,7 @@
       <%end %>
       <div class="card-product-infos">
         <h2> <%= link_to article.name, article_path(article) %></h2>
-        <p><%=article.price%> €</p>
+        <p><%=article.price.to_s.sub(/\.?0+$/, '')%> €</p>
       </div>
     </div>
   <% end %>

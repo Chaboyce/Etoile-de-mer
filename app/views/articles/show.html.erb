@@ -42,12 +42,13 @@
         <% end %>
       </div>
       <div class="mt-2">
-        <p class="text-center price"><%=@article.price%> €</p>
+        <p class="text-center price"><%=Integer(@article.price)%> €</p>
       </div>
     </div>
     <div>
-      <h3>Description</h3>
-      <h4> <%=@article.description%></h4>
+      <%  %>
+        <h3>Description </h3>
+        <h4> <%=@article.description%></h4>
     </div>
     <div>
       <h3>Dimensions</h3>

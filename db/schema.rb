@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_09_114326) do
+ActiveRecord::Schema.define(version: 2020_04_29_140032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 2020_04_09_114326) do
     t.text "dimensions"
     t.text "matiere"
     t.text "conseil"
+    t.decimal "oldprice"
     t.index ["categorie_id"], name: "index_articles_on_categorie_id"
   end
 

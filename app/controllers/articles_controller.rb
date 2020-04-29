@@ -57,7 +57,7 @@ before_action :authenticate_user!, except: [:index, :show]
   private
 
   def article_params
-    params.require(:article).permit(:name, :categorie_id, :price, :avatar, :description, :color, :dimensions, :matiere, :conseil, photos: [])
+    params.require(:article).permit(:name, :categorie_id, :price, :avatar, :description, :color, :dimensions, :matiere, :conseil, :oldprice, photos: [])
   end
 
 end

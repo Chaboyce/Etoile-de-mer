@@ -32,7 +32,7 @@
   </div>
 
   <div class="col-md-6 article-content">
-    <div class="text-center">
+    <div class="d-flex flex-column align-items-center">
       <div class= "d-inline-flex">
         <h2><%=@article.name%></h2>
         <% if user_signed_in? && current_user.admin? %>
@@ -41,8 +41,13 @@
           <% end %>
         <% end %>
       </div>
-      <div class="mt-2">
-        <p class="text-center price"><%=@article.price.to_s.sub(/\.?0+$/, '')%> €</p>
+      <div class="mt-2 d-inline-flex price">
+        <% unless @article.oldprice.nil?%>
+        <div class="mr-2">
+          <p><del><%=@article.oldprice.to_s.sub(/\.?0+$/, '') %> €</del></p>
+        </div>
+        <% end %>
+        <p><%=@article.price.to_s.sub(/\.?0+$/, '')%> €</p>
       </div>
     </div>
     <div>

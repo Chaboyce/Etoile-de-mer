@@ -2,10 +2,9 @@ class ContactsController < ApplicationController
 
 
 
-  def index
+  def new
     skip_policy_scope
-    @contact = Contact.new(params[:contact])
-
+    @contact = Contact.new
   end
 
   def create
@@ -13,15 +12,11 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
     authorize @contact
     @contact.request = request
-    respond_to do |format|
-     if @contact.save
-        @contact = Contact.new
-        format.html { render 'index'}
-       format.js   { flash.alert[:success] = @message = "Thank you for your message. I'll get back to you soon!" }
-      else
-        format.html { render 'index' }
-       format.js   { flash.alert[:error] = @message = "Message did not send." }
-      end
+    if @contact.deliver
+      flash.now[:error] = nil
+    else
+      flash.now[:error] = 'cannot send message'
+    render :new
     end
   end
 end

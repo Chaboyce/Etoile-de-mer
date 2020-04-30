@@ -1,11 +1,16 @@
 
 
-<%= form_for @contact, url: contacts_path, remote: true do |f| %>
+<%= form_for @contact do |f| %>
         <%= f.text_field  :name, required: true, class: "contact-form-text-area", placeholder: "Votre nom" %></br>
-        <%= f.text_field :email, required: true, class: "contact-form-text-area", placeholder: "Votre adresse email"%></br>
+        <%= f.email_field :email, required: true, class: "contact-form-text-area", placeholder: "Votre adresse email"%></br>
       <%= f.label "Votre message" %></br>
       <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area ",
                         placeholder: " Dites-moi tout..."%></br>
-      <%= f.submit 'Envoyer', class: 'btn btn-primary js-btn-submit'%>
+      <div class="hidden">
+      <%= f.label :nickname%></br>
+      <%= f.text_field  :nickname, hint: 'leave this field blank' %>
+      </div>
+
+      <%= f.submit 'Envoyer', class: 'btn btn-light js-btn-submit'%>
   <% end %>
 

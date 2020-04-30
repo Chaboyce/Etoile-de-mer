@@ -111,14 +111,14 @@ Rails.application.configure do
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
 
-config.action_mailer.default_url_options = { :host => 'https://www.omanette.com' }
+config.action_mailer.default_url_options = { :host => 'omanette.herokuapp.com' }
 config.action_mailer.delivery_method = :smtp
 config.action_mailer.perform_deliveries = true
 config.action_mailer.raise_delivery_errors = false
 ActionMailer::Base.smtp_settings = {
 :user_name => ENV['SENDGRID_USERNAME'],
 :password => ENV['SENDGRID_PASSWORD'],
-:domain => 'omanette.com',
+:domain => 'heroku.com',
 :address => 'smtp.sendgrid.net',
 :port => 587,
 :authentication => :plain,

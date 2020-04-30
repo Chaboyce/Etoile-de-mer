@@ -12,13 +12,6 @@ class ContactsController < ApplicationController
     skip_policy_scope
     @contact = Contact.new(params[:contact])
     authorize @contact
-    #ContactsMailer.contact_email(@contact).deliver
-    #redirect_to contacts_path, notice: 'Message sent'
-
-
-
-
-
     @contact.request = request
     respond_to do |format|
      if @contact.save
@@ -31,12 +24,4 @@ class ContactsController < ApplicationController
       end
     end
   end
-
-
-  private
-
-  #def contact_params
-    #params.require(:contact).permit(:name, :email, :message)
-  #end
-
 end

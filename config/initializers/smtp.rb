@@ -3,7 +3,7 @@
 
 ActionMailer::Base.smtp_settings = {
   address: 'heroku.com',
-  port: 587,
+  port: 465,
   domain: 'yourdomain.com',
   user_name: ENV['SENDGRID_USERNAME'],
   password: ENV['SENDGRID_PASSWORD'],

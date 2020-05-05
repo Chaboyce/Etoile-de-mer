@@ -1,18 +1,61 @@
+
+.card-carousel {
+  height: 100%;
+  background: white;
+  display: flex;
+  padding: 16px;
+  overflow: hidden;
+}
+
+.card-carousel h3 {
+  font-size: 16px;
+   margin-top: 8px;
+}
+
+.card-carousel h4 {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
 .carousel-item {
   overflow: hidden;
 }
 
-.carousel {
+.carousel-article{
+  padding: 40px;
+}
+
+.carousel .home {
 background-size: cover;
 background-repeat: no-repeat;
 height: 580px;
+
 }
 
+.carousel .article {
+background-size: cover;
+background-repeat: no-repeat;
+height: 450px;
+width: 80%;
+position: sticky;
+top: 0;
+}
+
+
+
 @media (max-width: 768px) {
-  .carousel {
+  .carousel .home {
     height: 300px;
   }
+  .carousel .article {
+    height: 250px;
+  }
+
 }
+
 
 .carousel-indicators > li {
   width: 10px;
@@ -20,10 +63,23 @@ height: 580px;
   border-radius: 100%;
   }
 
-.carousel-article {
-  position: sticky;
-  top: 0;
-  overflow: hidden;
-  padding: 24px;
 
-}
+/*navigation avec images miniatures*/
+.navigation_diapo{
+  display: flex; /*permet d'aligner les photos les unes à la suite des autres, on peut aussi utiliser le positionnement absolu*/
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  justify-content: center;
+  }
+
+.navigation_diapo li {
+  padding: .25rem;
+  }
+
+.navigation_diapo img{
+  height: 80px;
+  width: 80px;
+  }
+

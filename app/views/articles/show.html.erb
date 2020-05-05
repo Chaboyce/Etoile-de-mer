@@ -1,22 +1,33 @@
 <div class="container">
 
-<div class="row card-article">
+<div class="row card-carousel">
   <div class="col-md-6 carousel-article">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel article slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <% if !@article.photos[0].nil?%>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1" > </li>
+        <% end %>
+        <% if !@article.photos[1].nil?%>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <% end %>
+        <% if !@article.photos[2].nil?%>
         <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <% end %>
+        <% if !@article.photos[3].nil?%>
         <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <% end %>
+         <% if !@article.photos[4].nil?%>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        <% end %>
       </ol>
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <%= cl_image_tag @article.avatar.key, alt: "Ômanette",class:'carousel d-block w-100 h-100' if @article.avatar.attached? %>
+        <div class="carousel-item active" data-interval="10000">
+          <%= cl_image_tag @article.avatar.key, alt: "Ômanette",class:'carousel article d-block w-100' if @article.avatar.attached? %>
         </div>
         <% @illustrations.photos.each do |photo| %>
           <div class="carousel-item">
-            <%= cl_image_tag photo.key, alt: "Ômanette", class:'carousel d-block w-100 h-100'%>
+            <%= cl_image_tag photo.key, alt: "Ômanette", class:'carousel article d-block w-100'%>
           </div>
         <% end %>
       </div>
@@ -29,6 +40,26 @@
         <span class="sr-only">Next</span>
       </a>
     </div>
+    <ul class="navigation_diapo">
+      <li><a href="#carouselExampleIndicators" role="button" data-slide-to="0">
+        <%= cl_image_tag @article.avatar.key, alt: "Ômanette",class:'d-block w-80 h-80' if @article.avatar.attached? %></a>
+      </li>
+      <li><a href="#carouselExampleIndicators" role="button" data-slide-to="1">
+        <%= cl_image_tag @article.photos[0].key, alt: "Ômanette",class:'d-block w-80 h-80' if !@article.photos[0].nil? %></a>
+      </li>
+      <li><a href="#carouselExampleIndicators" role="button" data-slide-to="2">
+        <%= cl_image_tag @article.photos[1].key, alt: "Ômanette",class:'d-block w-80 h-80' if !@article.photos[1].nil? %></a>
+      </li>
+      <li><a href="#carouselExampleIndicators" role="button" data-slide-to="3">
+        <%= cl_image_tag @article.photos[2].key, alt: "Ômanette",class:'d-block w-80 h-80' if !@article.photos[2].nil? %></a>
+      </li>
+      <li><a href="#carouselExampleIndicators" role="button" data-slide-to="4">
+        <%= cl_image_tag @article.photos[3].key, alt: "Ômanette",class:'d-block w-80 h-80' if !@article.photos[3].nil? %></a>
+      </li>
+      <li><a href="#carouselExampleIndicators" role="button" data-slide-to="5">
+        <%= cl_image_tag @article.photos[4].key, alt: "Ômanette",class:'d-block w-80 h-80' if !@article.photos[4].nil? %></a>
+      </li>
+    </ul>
   </div>
 
   <div class="col-md-6 article-content">
@@ -93,5 +124,6 @@
   </div>
 </div>
 </div>
+
 
 

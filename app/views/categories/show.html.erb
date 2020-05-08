@@ -11,7 +11,7 @@
   <% @articles.each do |article|%>
     <div class="card-product">
       <%= link_to article_path(article) do %>
-        <%= cl_image_tag article.avatar.key, crop: :fill if article.avatar.attached? %>
+        <%= cl_image_tag article.avatar.key, crop: :scale, class:'zoom' if article.avatar.attached? %>
       <%end %>
       <div class="card-product-infos">
         <h2> <%= link_to article.name, article_path(article) %></h2>

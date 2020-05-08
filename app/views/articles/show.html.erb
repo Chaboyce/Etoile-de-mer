@@ -111,7 +111,7 @@
         <h4> <%=@article.conseil%></h4>
       <% end %>
     </div>
-    <div class="mt-3">
+    <div class="mt-3 d-flex-column">
       <div class="footer-article">
         <i class="fas fa-box-open"></i>
         <h4>Emballage soigné et 100% recyclé</h4>
@@ -120,7 +120,8 @@
         <i class="fas fa-tag"></i>
         <h4>Conçu et cousu entièrement en Bretagne</h4>
       </div>
-      <div class="mt-3">
+      <div class="mt-5 commander">
+        <h4>Une pièce unique pour une personne unique</h4>
         <%= link_to "Pour commander contactez moi", new_contact_path, class: "btn btn-light"%>
       </div>
     </div>

@@ -32,7 +32,7 @@
       <% @categories.each do |categorie|%>
       <div class="card-cat">
         <%= link_to category_path(categorie) do %>
-          <%= cl_image_tag categorie.photo.key, crop: :fit, alt: "Ômanette",class:'card-category w-100 zoom' if categorie.photo.attached? %>
+          <%= cl_image_tag categorie.photo.key, crop: :fill, alt: "Ômanette",class:'card-category w-100 zoom' if categorie.photo.attached? %>
         <%end %>
         <div class="title-cat d-inline-flex">
           <%= link_to categorie.name, category_path(categorie) %>

@@ -142,6 +142,7 @@
   height: 100vh;
   flex-grow: 1;
   overflow: auto;
+  padding: 15px 60px;
 }
 
 
@@ -197,7 +198,12 @@
 
 }
 
+
 .article-content h4 {
   white-space: pre-line;
 
+}
+
+.commander {
+  text-align: center;
 }

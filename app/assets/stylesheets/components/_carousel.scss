@@ -25,7 +25,7 @@
 }
 
 .carousel-article{
-  padding: 0px;
+  padding: 15px 80px;
 }
 
 .carousel .home {
@@ -39,20 +39,15 @@ height: 580px;
 background-size: cover;
 background-repeat: no-repeat;
 height: 450px;
+width: 100%;
 position: sticky;
 top: 0;
-padding: 15px 80px;
+padding: 15px 0px;
 }
 
-
-
-@media (max-width: 768px) {
-  .carousel .home {
-    height: 300px;
-  }
-  .carousel .article {
-    height: 250px;
-  }
+.carousel-inner .carousel-item img {
+    object-fit: cover;
+    object-position: 20% 0px;
 
 }
 
@@ -65,6 +60,8 @@ padding: 15px 80px;
 
 
 /*navigation avec images miniatures*/
+
+
 .navigation_diapo{
   display: flex; /*permet d'aligner les photos les unes à la suite des autres, on peut aussi utiliser le positionnement absolu*/
   list-style-type: none;
@@ -72,6 +69,7 @@ padding: 15px 80px;
   padding: 0;
   overflow: auto;
   justify-content: center;
+
   }
 
 .navigation_diapo li {
@@ -80,6 +78,19 @@ padding: 15px 80px;
 
 .navigation_diapo img{
   height: 80px;
-  width: 75px;
+  width: 80px;
+  object-fit: cover;
+  object-position: 20% 0px;
   }
 
+@media (max-width: 768px) {
+  .carousel .home {
+    height: 300px;
+  }
+  .carousel .article {
+    height: 250px;
+  }
+  .navigation_diapo {
+    display: none;
+  }
+}

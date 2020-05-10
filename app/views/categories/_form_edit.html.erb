@@ -1,7 +1,7 @@
 <div class="mt-3">
 <%= simple_form_for(@categorie) do |f| %>
   <%= f.input :name, label: false, placeholder: "Nom" %>
-  <%= f.input :photo, as: :file, label: false, placeholder: "photo" %>
+  <%= f.input :photo, as: :file, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: 'Photo'%>
   <%= f.submit 'Modifier', class: "btn btn-primary text-center" %>
 <% end %>
 </div>

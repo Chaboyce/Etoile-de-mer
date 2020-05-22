@@ -10,7 +10,7 @@
   <%= f.input :price, label: false, placeholder: "Prix" %>
   <%= f.input :oldprice, label: false, placeholder: "Ancien Prix" %>
   <%= f.input :avatar, as: :file, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: 'Photo principale' %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true }, input_html: { class: 'd-none' }, label_html: { class: 'upload-photo'}, label: "Autres photos" %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true }, label: "Autres photos" %>
   <%= f.submit "Créer", class: "btn btn-primary text-center"%>
   <%end %>
   </div>

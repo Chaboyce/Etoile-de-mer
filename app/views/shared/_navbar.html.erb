@@ -11,11 +11,14 @@
        <%= image_tag "logo omanette.png", class:"mt-2 mx-auto" %>
     <% end %>
   </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse">
+    <button class="navbar-toggler" type="button" data-toggle="dropdown" data-target=".dual-collapse">
       <span class="navbar-toggler-icon"></span>
     </button>
   <div class="navbar-collapse collapse w-100 order-3 dual-collapse">
     <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <%= link_to "Produits", root_path, class: "nav-link" %>
+      </li>
       <li class="nav-item">
         <%= link_to "Le concept", concept_path, class: "nav-link" %>
       </li>
